@@ -12,6 +12,11 @@ else
     echo "Create ~/.vimrc"
 fi
 
+mkdir -p $(PWD)/backups
+echo "Create backups dir"
+mkdir -p $(PWD)/undos
+echo "Create undos dir"
+
 #if [ -L ~/.gvimrc ]; then
 #    echo "Check ~/.gvimrc"
 #elif [ -f ~/.gvimrc ]; then
@@ -22,4 +27,4 @@ fi
 #    echo "Create ~/.gvimrc"
 #fi
 #
-#vim -c ':BundleInstall'
+vim -c ':BundleInstall'
