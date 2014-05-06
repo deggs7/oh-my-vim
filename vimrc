@@ -21,9 +21,11 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'tomasr/molokai'
 Plugin 'mattn/emmet-vim'
 Plugin 'nvie/vim-flake8'
+Plugin 'Lokaltog/vim-powerline'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'The-NERD-tree'
+Plugin 'Command-T'
 
 " plugin not on GitHub
 " Plugin 'git://git.wincent.com/command-t.git'
@@ -64,6 +66,8 @@ function! MySys()
         return "linux"
     endif
 endfunction
+
+set t_Co=256
 
 set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,gbk,gb2312
