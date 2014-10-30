@@ -22,10 +22,11 @@ Plugin 'tomasr/molokai'
 Plugin 'mattn/emmet-vim'
 Plugin 'nvie/vim-flake8'
 Plugin 'Lokaltog/vim-powerline'
+Plugin 'Valloric/YouCompleteMe'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'The-NERD-tree'
-Plugin 'Command-T'
+" Plugin 'Command-T'	" conflict with macvim
 
 " plugin not on GitHub
 " Plugin 'git://git.wincent.com/command-t.git'
@@ -90,10 +91,14 @@ set tabstop=4
 set softtabstop=4
 set nowrap
 
+set autoindent
+set smartindent
+
 " language support
-autocmd FileType javascript setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4 textwidth=80
+autocmd FileType javascript setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 textwidth=80
 autocmd FileType css setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType scss setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType html setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4 textwidth=80
 autocmd FileType text setlocal wrap
 
