@@ -3,7 +3,7 @@ oh-my-vim
 
 Make VIM as IDE(python, web)
 
-### requirement
+## Requirement
 
 ```
 pip install flake8
@@ -18,7 +18,7 @@ alias vim='/usr/local/bin/vim'
 alias vimdiff='/usr/local/bin/vimdiff'
 ```
 
-### Install
+## Install
 
 ```
 git clone git@github.com:deggs7/oh-my-vim.git ~/.vim
@@ -28,7 +28,7 @@ git submodule update
 ./install.sh
 ```
 
-### Update
+## Update
 
 ```
 cd ~/.vim
@@ -36,12 +36,12 @@ git pull origin
 ./install.sh
 ```
 
-### Shortcuts
+## Shortcuts
 
 * ,nt - NERDTree
 
 
 
-### Thanks
+## Thanks
 
 * https://github.com/dexteryy/YVim
