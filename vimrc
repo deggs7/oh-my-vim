@@ -94,6 +94,8 @@ set nowrap
 set autoindent
 set smartindent
 
+set backspace=indent,eol,start
+
 " language support
 autocmd FileType javascript setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 textwidth=80
 autocmd FileType css setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
