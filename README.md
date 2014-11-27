@@ -8,6 +8,15 @@ Make VIM as IDE(python, web)
 ```
 pip install flake8
 ```
+#### on MacOS
+YouCompleteMe requires Vim 7.3.584+
+
+Don't overwrite the built-in Vim.
+Instead, install it from source in a different location or via Homebrew or MacPorts in their default location then add this line to your .bashrc or .profile:
+```
+alias vim='/usr/local/bin/vim'
+alias vimdiff='/usr/local/bin/vimdiff'
+```
 
 ### Install
 
