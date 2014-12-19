@@ -116,7 +116,7 @@ endif
 
 if MySys() == "mac"
     set guifont=Monaco:h13
-    set guifontwide=Hei_Regular:h13
+    " set guifontwide=Hei_Regular:h13
 elseif MySys() == "linux"
     set guifont=Monospace
 endif
