@@ -78,6 +78,7 @@ set backupdir=~/.vim/backups
 set undodir=~/.vim/undos
 
 set laststatus=2   " Always show the statusline
+
 set nu
 set ruler
 
@@ -115,8 +116,8 @@ if has("gui_running") || has("gui_macvim")
 endif
 
 if MySys() == "mac"
-    set guifont=Monaco:h13
-    " set guifontwide=Hei_Regular:h13
+    set guifont=Monaco:h16
+    " set guifontwide=Hei_Regular:h14
 elseif MySys() == "linux"
     set guifont=Monospace
 endif
