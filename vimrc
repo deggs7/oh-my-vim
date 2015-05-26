@@ -23,6 +23,7 @@ Plugin 'mattn/emmet-vim'
 Plugin 'nvie/vim-flake8'
 Plugin 'Lokaltog/vim-powerline'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'Shutnik/jshint2.vim'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'The-NERD-tree'
@@ -134,5 +135,11 @@ let g:mapleader=","
 nmap <silent> <leader>nt :call OpenNERDTree()<cr>
 function! OpenNERDTree()
     :NERDTree
+endfunction
+
+" JSHint setting
+nmap <silent> <leader>jh :call OpenJSHint()<cr>
+function! OpenJSHint()
+    :JSHint
 endfunction
 
