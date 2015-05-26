@@ -53,6 +53,7 @@ git pull origin
 ## Shortcuts
 
 * ,nt - NERDTree
+* ,jh - JSHint
 
 
 
