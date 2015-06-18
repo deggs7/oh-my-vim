@@ -24,6 +24,8 @@ Plugin 'nvie/vim-flake8'
 Plugin 'Lokaltog/vim-powerline'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'Shutnik/jshint2.vim'
+Plugin 'majutsushi/tagbar'
+
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'The-NERD-tree'
@@ -143,3 +145,5 @@ function! OpenJSHint()
     :JSHint
 endfunction
 
+" Tagbar setting
+nmap <silent> <leader>tb :TagbarToggle<cr>

@@ -5,9 +5,19 @@ Make VIM as IDE(python, web)
 
 ## Requirement
 
+* flake8
+* [Exuberant ctags](http://ctags.sourceforge.net/)
+
+Install flake8
 ```
 pip install flake8
 ```
+
+Install by brew on MacOs
+```
+brew install ctags-exuberant
+```
+
 #### on MacOS
 YouCompleteMe requires Vim 7.3.584+
 
