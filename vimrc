@@ -29,7 +29,7 @@ Plugin 'majutsushi/tagbar'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'The-NERD-tree'
-" Plugin 'Command-T'	" conflict with macvim
+Plugin 'Command-T'	" conflict with macvim
 
 " plugin not on GitHub
 " Plugin 'git://git.wincent.com/command-t.git'
@@ -147,3 +147,6 @@ endfunction
 
 " Tagbar setting
 nmap <silent> <leader>tb :TagbarToggle<cr>
+
+" Command-T
+nmap <silent> <leader>ct :CommandT<cr>

@@ -64,6 +64,19 @@ git pull origin
 
 * ,nt - NERDTree
 * ,jh - JSHint
+* ,tb - TagbarToggle
+* ,ct - Command-T
+
+## Q&A
+
+The C extension must then be built for command-t
+
+```
+cd ~/.vim/bundle/Command-T/ruby/command-t/
+ruby extconf.rb
+make
+```
+
 
 
 
