@@ -6,6 +6,7 @@ Make VIM as IDE(python, web)
 ## Requirement
 
 * flake8
+* ack
 * [Exuberant ctags](http://ctags.sourceforge.net/)
 
 Install flake8

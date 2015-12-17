@@ -25,6 +25,8 @@ Plugin 'Lokaltog/vim-powerline'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'Shutnik/jshint2.vim'
 Plugin 'majutsushi/tagbar'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'mileszs/ack.vim'
 
 
 " plugin from http://vim-scripts.org/vim/scripts.html
@@ -105,6 +107,7 @@ autocmd FileType javascript setlocal expandtab shiftwidth=2 tabstop=2 softtabsto
 autocmd FileType css setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType scss setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType html setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType jade setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4 textwidth=80
 autocmd FileType text setlocal wrap
 
