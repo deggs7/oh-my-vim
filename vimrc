@@ -22,11 +22,12 @@ Plugin 'tomasr/molokai'
 Plugin 'mattn/emmet-vim'
 Plugin 'nvie/vim-flake8'
 Plugin 'Lokaltog/vim-powerline'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'Shutnik/jshint2.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'mileszs/ack.vim'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'editorconfig/editorconfig-vim'
 
 
 " plugin from http://vim-scripts.org/vim/scripts.html
@@ -105,6 +106,7 @@ set backspace=indent,eol,start
 " language support
 autocmd FileType javascript setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 textwidth=80
 autocmd FileType css setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType less setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType scss setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType html setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType jade setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
