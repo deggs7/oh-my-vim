@@ -142,6 +142,7 @@ let g:mapleader=","
 " NERDTree setting
 nmap <silent> <leader>nt :call OpenNERDTree()<cr>
 function! OpenNERDTree()
+    let g:NERDTreeWinSize = 32
     :NERDTree
 endfunction
 
