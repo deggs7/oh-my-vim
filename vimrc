@@ -28,9 +28,6 @@ Plugin 'digitaltoad/vim-jade'
 Plugin 'mileszs/ack.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'editorconfig/editorconfig-vim'
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-easytags'
-
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'The-NERD-tree'
@@ -161,23 +158,15 @@ nmap <silent> <leader>tb :TagbarToggle<cr>
 nmap <silent> <leader>ct :CommandT<cr>
 
 " YouCompleteMe
-" let g:ycm_autoclose_preview_window_after_completion = 0
+" let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
+nmap <silent> <leader>gt :YcmCompleter GoToDefinition<cr>
+nmap <silent> <leader>gr :YcmCompleter GoToReferences<cr>
+nmap <silent> <leader>tp :YcmCompleter GetType<cr>
+" nmap <silent> <leader>dc:YcmCompleter GetDoc<cr>
+command! -nargs=1 RR call RefactorRename(<f-args>)
+function! RefactorRename(newName)
+    echo a:newName
+    :execute ":YcmCompleter RefactorRename " a:newName
+endfunction
 
-" easytags
-let g:ycm_collect_identifiers_from_tags_files = 1
-" set tags=./.vimtags;
-let g:easytags_cmd = '/usr/local/bin/jsctags'
-" let g:easytags_file = '~/.vimtags'
-let g:easytags_updatetime_warn = 0
-let g:easytags_events = ['BufReadPost', 'BufWritePost']
-
-let g:easytags_languages = {
-  \   'javascript': {
-  \       'cmd': g:easytags_cmd,
-  \       'args': [],
-  \       'fileoutput_opt': '-f',
-  \       'stdout_opt': '-f-',
-  \       'recurse_flag': '-R'
-  \   }
-\}
