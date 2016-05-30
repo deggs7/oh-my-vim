@@ -28,6 +28,8 @@ Plugin 'digitaltoad/vim-jade'
 Plugin 'mileszs/ack.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-easytags'
 
 
 " plugin from http://vim-scripts.org/vim/scripts.html
@@ -157,3 +159,25 @@ nmap <silent> <leader>tb :TagbarToggle<cr>
 
 " Command-T
 nmap <silent> <leader>ct :CommandT<cr>
+
+" YouCompleteMe
+" let g:ycm_autoclose_preview_window_after_completion = 0
+let g:ycm_autoclose_preview_window_after_insertion = 1
+
+" easytags
+let g:ycm_collect_identifiers_from_tags_files = 1
+" set tags=./.vimtags;
+let g:easytags_cmd = '/usr/local/bin/jsctags'
+" let g:easytags_file = '~/.vimtags'
+let g:easytags_updatetime_warn = 0
+let g:easytags_events = ['BufReadPost', 'BufWritePost']
+
+let g:easytags_languages = {
+  \   'javascript': {
+  \       'cmd': g:easytags_cmd,
+  \       'args': [],
+  \       'fileoutput_opt': '-f',
+  \       'stdout_opt': '-f-',
+  \       'recurse_flag': '-R'
+  \   }
+\}
