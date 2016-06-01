@@ -28,13 +28,10 @@ Plugin 'digitaltoad/vim-jade'
 Plugin 'mileszs/ack.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'editorconfig/editorconfig-vim'
-Plugin 'scrooloose/nerdcommenter'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'The-NERD-tree'
-Plugin 'authorinfo'
 Plugin 'Command-T'	" conflict with macvim
-Plugin 'mayansmoke'
 
 " plugin not on GitHub
 " Plugin 'git://git.wincent.com/command-t.git'
@@ -52,7 +49,7 @@ Plugin 'mayansmoke'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
-" filetype plugin on
+"filetype plugin on
 "
 " Brief help
 " :PluginList          - list configured plugins
@@ -122,12 +119,8 @@ autocmd FileType text setlocal wrap
 syntax enable
 
 if has("gui_running") || has("gui_macvim")
-    " good for eyes
-    colorscheme mayansmoke 
-    let g:colors_name="mayansmoke"
-
-    " colorscheme molokai
-    " let g:colors_name="molokai"
+    colorscheme molokai 
+    let g:colors_name="molokai"
 endif
 
 if MySys() == "mac"
@@ -165,28 +158,15 @@ nmap <silent> <leader>tb :TagbarToggle<cr>
 nmap <silent> <leader>ct :CommandT<cr>
 
 " YouCompleteMe
-let g:ycm_autoclose_preview_window_after_insertion = 1
 " let g:ycm_autoclose_preview_window_after_completion = 1
-nmap <silent> <leader>gg :YcmCompleter GoToDefinition<cr>
-nmap <silent> <leader>rr :YcmCompleter GoToReferences<cr>
-nmap <silent> <leader>tt :YcmCompleter GetType<cr>
+let g:ycm_autoclose_preview_window_after_insertion = 1
+nmap <silent> <leader>gt :YcmCompleter GoToDefinition<cr>
+nmap <silent> <leader>gr :YcmCompleter GoToReferences<cr>
+nmap <silent> <leader>tp :YcmCompleter GetType<cr>
 " nmap <silent> <leader>dc:YcmCompleter GetDoc<cr>
-command! -nargs=1 RR :call s:RefactorRename(<f-args>)
-function s:RefactorRename(newName)
+command! -nargs=1 RR call RefactorRename(<f-args>)
+function! RefactorRename(newName)
     echo a:newName
     :execute ":YcmCompleter RefactorRename " a:newName
 endfunction
 
-" Nerd Commenter
-" Add spaces after comment delimiters by default
-let g:NERDSpaceDelims = 1
-" Use compact syntax for prettified multi-line comments
-let g:NERDCompactSexyComs = 1
-" Align line-wise comment delimiters flush left instead of following code indentation
-let g:NERDDefaultAlign = 'left'
-
-" Author Info
-nmap <F4> :AuthorInfoDetect<cr> 
-let g:vimrc_author='DeKun' 
-let g:vimrc_email='deggs.k@gmail.com' 
-let g:vimrc_homepage='https://github.com/deggs7' 
